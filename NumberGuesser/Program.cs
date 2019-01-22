@@ -6,7 +6,8 @@ namespace NumberGuesser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string name = "Piyush Mehta";
+            Console.WriteLine("Hello " + name);
         }
     }
 }
