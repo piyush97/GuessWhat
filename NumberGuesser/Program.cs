@@ -29,8 +29,10 @@ namespace NumberGuesser
             // Greet
             Console.WriteLine("Hello {0} lets play a game", name);
 
-            // init set correct number
-            int correctNumber = 7;
+            // init new random number
+            Random random = new Random();
+
+            int correctNumber = random.Next(1, 10);
 
             // init Guess Var
             int guess = 0;
@@ -44,6 +46,20 @@ namespace NumberGuesser
                 // get user's input
                 string GuessNumber = Console.ReadLine();
 
+                // make sure it's a number
+                if (!int.TryParse(GuessNumber, out guess)){
+                    // change text color to red because error
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    // message
+                    Console.WriteLine("it's NaN, enter a Number please");
+
+                    // reset color
+                    Console.ResetColor();
+
+                    // keep going
+                    continue;
+                }
                 // parsing string to int
                 guess = Int32.Parse(GuessNumber);
 
