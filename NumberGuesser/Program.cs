@@ -19,6 +19,25 @@ namespace NumberGuesser
 
             // Reset Text color
             Console.ResetColor();
+
+            // ask users name
+            Console.WriteLine("What is your name");
+
+            // Get input
+            string name = Console.ReadLine();
+
+            // Greet
+            Console.WriteLine("Hello {0} lets play a game", name);
+
+            // init set correct number
+            int correctNumber = 7;
+
+            // init Guess Var
+            int guess = 0;
+
+            // asking user to guess a number
+
+            Console.WriteLine("Gues a number between 1 and 10");
         }
     }
 }
