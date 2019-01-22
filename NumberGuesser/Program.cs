@@ -54,8 +54,21 @@ namespace NumberGuesser
 
                     // message
                     Console.WriteLine("Wrong Number Guess again");
+
+                    // reset color
+                    Console.ResetColor();
                 }
             }
+            // Output Success Message
+
+            // change text color to red because error
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            // message
+            Console.WriteLine("Voila! Correct Number Guessed");
+
+            // reset color
+            Console.ResetColor();
         }
     }
 }
