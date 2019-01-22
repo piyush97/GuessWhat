@@ -12,7 +12,7 @@ namespace NumberGuesser
             string appAuthor = "Piyush Mehta";
 
             // Change in TextColor
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Green;
 
             // Write out app info
             Console.WriteLine("{0}: Version {1} by {2}", appName,appVersion,appAuthor);
@@ -37,7 +37,25 @@ namespace NumberGuesser
 
             // asking user to guess a number
 
-            Console.WriteLine("Gues a number between 1 and 10");
+            Console.WriteLine("Guess a number between 1 and 10");
+
+            // while guess is not correct
+            while(guess != correctNumber){
+                // get user's input
+                string GuessNumber = Console.ReadLine();
+
+                // parsing string to int
+                guess = Int32.Parse(GuessNumber);
+
+                // match guess to correct number
+                if(guess != correctNumber){
+                    // change text color to red because error
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    // message
+                    Console.WriteLine("Wrong Number Guess again");
+                }
+            }
         }
     }
 }
