@@ -6,11 +6,12 @@ namespace NumberGuesser
     {
         static void Main(string[] args)
         {
-            string name = "Piyush Mehta";
-            int age = 35;
+            // Set app vars
+            string appName = "Gues It";
+            string appVersion = "1.0.0";
+            string appAuthor = "Piyush Mehta";
 
-            Console.WriteLine(name + " is" + age);
-            Console.WriteLine("{0} is {1}", name, age);
+            Console.WriteLine("{0}: Version {1} by {2}", appName,appVersion,appAuthor);
         }
     }
 }
